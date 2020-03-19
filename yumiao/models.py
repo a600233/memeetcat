@@ -7,9 +7,9 @@ class user(models.Model):
     userid = models.CharField(max_length=20)
     username = models.CharField(max_length=20)
     userpassword = models.CharField(max_length=20)
-    usertelephone = models.IntegerField()
+    usertelephone = models.CharField(max_length=20)
+    usergender = models.BooleanField(default=False)
     useremail = models.CharField(max_length=20)
-    usergender = models.BooleanField(default=True)
 
     def __str__(self):
         return self.userid
@@ -24,8 +24,8 @@ class admin(models.Model):
     adminname = models.CharField(max_length=20)
     adminpassword = models.CharField(max_length=20)
     adminemail = models.CharField(max_length=20)
-    admintelephone = models.IntegerField()
-    adminauthority = models.IntegerField()
+    admintelephone = models.CharField(max_length=20)
+    adminauthority = models.CharField(max_length=20)
 
     def __str__(self):
         return self.adminid
@@ -40,9 +40,9 @@ class application(models.Model):
     appname = models.CharField(max_length=20)
     appreason = models.CharField(max_length=100)
     applocation = models.CharField(max_length=100)
-    appgender = models.BooleanField(default=True)
-    appage = models.IntegerField()
-    appincome = models.IntegerField()
+    appgender = models.BooleanField(default=False)
+    appage = models.CharField(max_length=20)
+    appincome = models.CharField(max_length=20)
 
     def __str__(self):
         return self.appid
@@ -58,7 +58,7 @@ class cat(models.Model):
     catlocation = models.CharField(max_length=100)
     catintroduction = models.CharField(max_length=100)
     catbreed =  models.CharField(max_length=100)
-    catage = models.IntegerField()
+    catage = models.CharField(max_length=20)
     catpicture = models.ImageField(upload_to='img',null=True)
 
     def __str__(self):
