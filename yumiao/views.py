@@ -7,6 +7,19 @@ from django.http import JsonResponse
 def index(request):
     return render(request, 'yumiao/index.html')
 
+
+def about(request):
+    return render(request, 'yumiao/about.html')
+
+def apply(request):
+    return render(request, 'yumiao/apply.html')
+
+def gallery(request):
+    return render(request, 'yumiao/gallery.html')
+
+def contact(request):
+    return render(request, 'yumiao/contact.html')
+
 def login(request):
     if request.method == 'GET':
         return render(request, 'yumiao/login.html')

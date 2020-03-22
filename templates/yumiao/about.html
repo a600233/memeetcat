@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About</title>
+{% load static %}
+{% csrf_token %}
+<title>MeMeetCat</title>
 <!--mobile apps-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,19 +11,19 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--//mobile apps-->
 <!-- Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="{% static 'Page/css/bootstrap.css' %}" type="text/css" rel="stylesheet" media="all">
+<link href="{% static 'Page/css/style.css' %}" type="text/css" rel="stylesheet" media="all">
 <!-- //Custom Theme files -->
 <!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script> 
+<script src="{% static 'Page/js/jquery-1.11.1.min.js' %}"></script>
 <!-- //js -->
 <!--web-fonts-->
 <link href='http://fonts.useso.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>	
 <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 <!--//web-fonts-->
 <!-- start-smooth-scrolling-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript" src="{% static 'Page/js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'Page/js/easing.js' %}"></script>
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -39,7 +41,7 @@
 		<div class="effect5"><!--shadow effect-->
 			<div class="container">
 				<div class="logo">
-					<h1><a href="index.html"><img src="images/logo.png" alt="" /></a></h1>
+					<h1><a href="//127.0.0.1:8000/yumiao/"><img src="{% static 'Page/images/MeMeet Cat!.png' %}" alt="" /></a></h1>
 				</div>
 				<div class="top-nav">
 					<nav class="navbar navbar-default">
@@ -51,11 +53,11 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-center">
-								<li><a href="index.html" class="link link--yaku"><span>H</span><span>O</span><span>M</span><span>E</span></a></li>
-								<li class="active"><a href="about.html"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a></li>
-								<li><a href="codes.html" class="link link--yaku"><span>S</span><span>H</span><span>O</span><span>R</span><span>T</span> <span>C</span><span>O</span><span>D</span><span>E</span><span>S</span></a></li>
-								<li><a href="gallery.html" class="link link--yaku"><span>G</span><span>A</span><span>L</span><span>L</span><span>E</span><span>R</span><span>Y</span></a>
-								<li><a href="#contact" class="scroll link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span> <span>U</span><span>S</span></a></li>
+								<li><a href="//127.0.0.1:8000/yumiao/" class="link link--yaku"><span>H</span><span>O</span><span>M</span><span>E</span></a></li>
+								<li class="active"><a href="//127.0.0.1:8000/yumiao/about"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a></li>
+								<li><a href="//127.0.0.1:8000/yumiao/apply" class="link link--yaku"><span>A</span><span>P</span><span>P</span><span>L</span><span>Y</span></a></li>
+								<li><a href="//127.0.0.1:8000/yumiao/gallery" class="link link--yaku"><span>G</span><span>A</span><span>L</span><span>L</span><span>E</span><span>R</span><span>Y</span></a>
+								<li><a href="//127.0.0.1:8000/yumiao/contact" class="link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span> <span>U</span><span>S</span></a></li>
 							</ul>
 							<div class="clearfix"> </div>
 						</div>
@@ -73,7 +75,7 @@
 			<h2 class="title">About Us</h2>
 			<div class="about-info">
 				<div class="col-md-4 about-top-grid">
-					<img src="images/img4.jpg" alt="" />
+					<img src="{% static 'Page/images/cat5.jpg' %}" alt="" />
 				</div>
 				<div class="col-md-8 about-top-grid about-grid-right">
 					<h4>Quisque eget nunc a ligula lobortis facilisis sed ornare commodo nunc elementum ultricies fusce eget lorem fringilla </h4>
@@ -98,20 +100,20 @@
 				<div class="col-md-6 event-grids">
 					<div class="six">
 						<h4>10<span>Nov</span></h4>
-						<h6><a href="single.html">Sed ut perspiciatis unde omnis </a></h6>
+						<h6><a href="apply.html">Sed ut perspiciatis unde omnis </a></h6>
 						<div class="clearfix"> </div>
 					</div>
 					<p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
-					<a href="single.html" class="btn btn-1 btn-1b">Read More</a>
+					<a href="apply.html" class="btn btn-1 btn-1b">Read More</a>
 				</div>
 				<div class="col-md-6 event-grids">
 					<div class="six">
 						<h4>20<span>Dec</span></h4>
-						<h6><a href="single.html">Voluptatem accusa doloremque </a></h6>
+						<h6><a href="apply.html">Voluptatem accusa doloremque </a></h6>
 						<div class="clearfix"> </div>
 					</div>
 					<p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
-					<a href="single.html" class="btn btn-1 btn-1b">Read More</a>
+					<a href="apply.html" class="btn btn-1 btn-1b">Read More</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -121,15 +123,15 @@
 	<!--products-->
 	<div class="about about-products">		
 		<div class="container">
-			<h3 class="title">Our Products</h3>
+			<h3 class="title">Our Cats</h3>
 			<div class="products-row">
 				<div class="col-sm-6 col-md-3 products-grids">
 					<div class="thumbnail products-thmnl">
 						<div class="product-img">
-							<img src="images/g2.jpg" class="img-responsive zoom-img" alt="...">
+							<img src="{% static 'Page/images/ex3.jpg' %}" class="img-responsive zoom-img" alt="...">
 						</div>
 						<div class="caption">
-							<h4><a href="single.html">Vines plants</a></h4>
+							<h4><a href="apply.html">Vines plants</a></h4>
 							<p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary</p>						
 						</div>
 					</div>
@@ -137,10 +139,10 @@
 				<div class="col-sm-6 col-md-3 products-grids">
 					<div class="thumbnail products-thmnl">
 						<div class="product-img">
-							<img src="images/g10.jpg" class="img-responsive zoom-img" alt="...">
+							<img src="{% static 'Page/images/ex4.jpg' %}" class="img-responsive zoom-img" alt="...">
 						</div>
 						<div class="caption">
-							<h4><a href="single.html">Moluptatem</a></h4>
+							<h4><a href="apply.html">Moluptatem</a></h4>
 							<p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary</p>						
 						</div>
 					</div>
@@ -148,10 +150,10 @@
 				<div class="col-sm-6 col-md-3 products-grids">
 					<div class="thumbnail products-thmnl">
 						<div class="product-img">
-							<img src="images/g5.jpg" class="img-responsive zoom-img" alt="...">
+							<img src="{% static 'Page/images/ex8.jpg' %}" class="img-responsive zoom-img" alt="...">
 						</div>
 						<div class="caption">
-							<h4><a href="single.html">Perspiciatis</a></h4>
+							<h4><a href="apply.html">Perspiciatis</a></h4>
 							<p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary</p>						
 						</div>
 					</div>
@@ -159,7 +161,7 @@
 				<div class="col-sm-6 col-md-3 products-grids">
 					<div class="thumbnail products-thmnl">
 						<div class="product-img">
-							<img src="images/g4.jpg" class="img-responsive zoom-img" alt="...">
+							<img src="{% static 'Page/images/ex9.jpg' %}" class="img-responsive zoom-img" alt="...">
 						</div>
 						<div class="caption">
 							<h4><a href="#">Lertyasea</a></h4>
@@ -175,7 +177,7 @@
 	<!--contact-->
 	<div class="contact" id="contact">
 		<div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.899142009709!2d23.72354!3d37.979482999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd238977fb45%3A0xbdf5a6106a003293!2sFashion+Workshop+by+Vicky+Kaya!5e0!3m2!1sen!2sin!4v1440569426817" allowfullscreen></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2160.61882886359!2d-4.288122909821198!3d55.872261162302685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488845d20af469b3%3A0xa3f0620b655e4983!2z5qC85ouJ5pav5ZOl5aSn5a2m!5e0!3m2!1szh-CN!2suk!4v1584643883044!5m2!1szh-CN!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			<div class="map-color">
 			</div>
 		</div>
@@ -244,17 +246,19 @@
 			<div class="container">	
 				<div class="icons">	
 					<ul>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><img src="images/i1.png" alt=""/></a></li>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><img src="images/i2.png" alt=""/> </a></li>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Google+"><img src="images/i3.png" alt=""/></a></li>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="LinkedIn"><img src="images/i4.png" alt=""/> </a></li>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><img src="images/i5.png" alt=""/> </a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><img src="{% static 'Page/images/i1.png' %}" alt=""/></a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><img src="{% static 'Page/images/i2.png' %}" alt=""/> </a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Google+"><img src="{% static 'Page/images/i3.png' %}" alt=""/></a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="LinkedIn"><img src="{% static 'Page/images/i4.png' %}" alt=""/> </a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><img src="{% static 'Page/images/i5.png' %}" alt=""/> </a></li>
 					</ul>
 					<script>$(function () {
 					  $('[data-toggle="tooltip"]').tooltip()
 					})</script>
 				</div>
-				<p>Academy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, </p>					
+				<div class="row" style="padding-top: 60px; clear: both;">
+				    <div class="col-md-12 text-center"><p><small>&copy; All Rights Reserved. More Information Contact Us <a href="" target="_blank" title="eee">memeetcat@gmail.com</a></small></p>
+                </div>
 			</div>
 		</div>
 	</div>
@@ -280,6 +284,6 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
+    <script src="{% static 'Page/js/bootstrap.js' %}"></script>
 </body>
 </html>

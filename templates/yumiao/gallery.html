@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Gallery</title>
+{% load static %}
+{% csrf_token %}
+<title>MeMeetCat</title>
 <!--mobile apps-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,12 +11,12 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--//mobile apps-->
 <!-- Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link rel="stylesheet" href="css/lightbox.css">
+<link href="{% static 'Page/css/bootstrap.css' %}" type="text/css" rel="stylesheet" media="all">
+<link href="{% static 'Page/css/style.css' %}" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="{% static 'Page/css/lightbox.css' %}">
 <!-- //Custom Theme files -->
 <!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script> 
+<script src="{% static '' %}js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
 <!--web-fonts-->
 <link href='http://fonts.useso.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>	
@@ -27,23 +29,22 @@
 		<div class="effect5"><!--shadow effect-->
 			<div class="container">
 				<div class="logo">
-					<h1><a href="index.html"><img src="images/logo.png" alt="" /></a></h1>
+					<h1><a href="//127.0.0.1:8000/yumiao/"><img src="{% static 'Page/images/MeMeet Cat!.png' %}" alt="" /></a></h1>
 				</div>
 				<div class="top-nav">
 					<nav class="navbar navbar-default">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu
-								
 							</button>
 						</div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-center">
-								<li><a href="index.html" class="link link--yaku"><span>H</span><span>O</span><span>M</span><span>E</span></a></li>
-								<li><a href="about.html" class="link link--yaku"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a></li>
-								<li><a href="codes.html" class="link link--yaku"><span>S</span><span>H</span><span>O</span><span>R</span><span>T</span> <span>C</span><span>O</span><span>D</span><span>E</span><span>S</span></a></li>
-								<li class="active"><a href="gallery.html"><span>G</span><span>A</span><span>L</span><span>L</span><span>E</span><span>R</span><span>Y</span></a>
-								<li><a href="#contact" class="scroll link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span> <span>U</span><span>S</span></a></li>
+								<li><a href="//127.0.0.1:8000/yumiao/" class="link link--yaku"><span>H</span><span>O</span><span>M</span><span>E</span></a></li>
+								<li><a href="//127.0.0.1:8000/yumiao/about" class="link link--yaku"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a></li>
+								<li><a href="//127.0.0.1:8000/yumiao/apply" class="link link--yaku"><span>A</span><span>P</span><span>P</span><span>L</span><span>Y</span></a></li>
+								<li class="active"><a href="//127.0.0.1:8000/yumiao/gallery"><span>C</span><span>A</span><span>T</span><span>S</span></a>
+								<li><a href="//127.0.0.1:8000/yumiao/contact" class="link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span> <span>U</span><span>S</span></a></li>
 							</ul>
 							<div class="clearfix"> </div>
 						</div>
@@ -56,90 +57,90 @@
 	<!--gallery-->
 	<div class="gallery">		
 		<div class="container">
-			<h2 class="title">Our Gallery</h2>
+			<h2 class="title">Our Cats</h2>
 			<div class="gallery-grids">				
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g1.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g1.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex1.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex1.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g2.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex2.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex2.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g3.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g3.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex3.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex3.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g4.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g4.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex4.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex4.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g5.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g5.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex5.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex5.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g6.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g6.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex6.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex6.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g7.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g7.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex7.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex7.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g8.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g8.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex8.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex8.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 port-grids view view-fourth">
-					<a class="example-image-link" href="images/g9.jpg" data-lightbox="example-set" data-title="">
-						<img src="images/g9.jpg" class="img-responsive" alt=""/>
+					<a class="example-image-link" href="{% static 'Page/images/ex9.jpg' %}" data-lightbox="example-set" data-title="">
+						<img src="{% static 'Page/images/ex9.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
 							<p>By using Bio Farming Services we can raise your crops and livestock</p>
 						</div>
 					</a>
 				</div>
 				<div class="clearfix"> </div>	
-				<script src="js/lightbox-plus-jquery.min.js"> </script>
+				<script src="{% static 'Page/js/lightbox-plus-jquery.min.js' %}"> </script>
 			</div>				
 		</div>
 	</div>	
 	<!--//gallery-->
 	<!--contact-->
-	<div class="contact" id="contact">
+    <div class="contact" id="contact">
 		<div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.899142009709!2d23.72354!3d37.979482999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd238977fb45%3A0xbdf5a6106a003293!2sFashion+Workshop+by+Vicky+Kaya!5e0!3m2!1sen!2sin!4v1440569426817" allowfullscreen></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2160.61882886359!2d-4.288122909821198!3d55.872261162302685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488845d20af469b3%3A0xa3f0620b655e4983!2z5qC85ouJ5pav5ZOl5aSn5a2m!5e0!3m2!1szh-CN!2suk!4v1584643883044!5m2!1szh-CN!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			<div class="map-color">
 			</div>
 		</div>
@@ -180,8 +181,8 @@
 					</div>
 					<div class="col-xs-10 contact-grdr">
 						<ul>
-							<li>345 Diamond Street,</li>
-							<li>Greece.</li>
+							<li>University of Glasgow,</li>
+							<li>Glasgow.</li>
 						</ul>
 					</div>
 					<div class="clearfix"> </div>
@@ -192,7 +193,7 @@
 					</div>
 					<div class="col-xs-10 contact-grdr">
 						<ul>
-							<li><a href="mailto:example@mail.com">mail@example.com</a></li>
+							<li><a href="mailto:example@mail.com">memeetcat@gmail.com</a></li>
 						</ul>
 					</div>
 					<div class="clearfix"> </div>
@@ -208,24 +209,26 @@
 			<div class="container">	
 				<div class="icons">	
 					<ul>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><img src="images/i1.png" alt=""/></a></li>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><img src="images/i2.png" alt=""/> </a></li>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Google+"><img src="images/i3.png" alt=""/></a></li>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="LinkedIn"><img src="images/i4.png" alt=""/> </a></li>
-						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><img src="images/i5.png" alt=""/> </a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><img src="{% static 'Page/images/i1.png' %}" alt=""/></a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><img src="{% static 'Page/images/i2.png' %}" alt=""/> </a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Google+"><img src="{% static 'Page/images/i3.png' %}" alt=""/></a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="LinkedIn"><img src="{% static 'Page/images/i4.png' %}" alt=""/> </a></li>
+						<li><a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><img src="{% static 'Page/images/i5.png' %}" alt=""/> </a></li>
 					</ul>
 					<script>$(function () {
 					  $('[data-toggle="tooltip"]').tooltip()
 					})</script>
 				</div>
-				<p>Academy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, </p>					
+				<div class="row" style="padding-top: 60px; clear: both;">
+				    <div class="col-md-12 text-center"><p><small>&copy; All Rights Reserved. More Information Contact Us <a href="" target="_blank" title="eee">memeetcat@gmail.com</a></small></p>
+                </div>
 			</div>
 		</div>
 	</div>
 	<!--//footer-->
 	<!-- start-smooth-scrolling-->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>	
+	<script type="text/javascript" src="{% static 'Page/js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'Page/js/easing.js' %}"></script>
 	<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
@@ -253,10 +256,6 @@
 		});
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	<!--//smooth-scrolling-of-move-up-->
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
+    <script src="{% static 'Page/js/bootstrap.js' %}"></script>
 </body>
 </html>
