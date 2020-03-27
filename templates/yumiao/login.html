@@ -96,7 +96,6 @@
                 url: "http://127.0.0.1:8000/yumiao/login/",
                 type: "POST",
                 data:{
-
                     'username': $('#username').val(),
                     'userpassword': $('#userpassword').val()
                 },
@@ -106,7 +105,7 @@
                         if (data.success == '200') {
                             alert("Login successfully! ")
                             $("#username").html(data.username)
-                            window.location.href = "http://127.0.0.1:8000/user?username="+data.username + '&balance='+data.balance
+                            window.location.href = "http://127.0.0.1:8000/yumiao/model?username="+data.username
                             return true
                         }
                         if (data.success == '201') {

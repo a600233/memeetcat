@@ -4,11 +4,11 @@ from django.db import models
 
 class user(models.Model):
     userObj = models.Manager()
-    userid = models.CharField(max_length=20)
+    userid = models.CharField(max_length=20,default=False)
     username = models.CharField(max_length=20)
     userpassword = models.CharField(max_length=20)
     usertelephone = models.CharField(max_length=20)
-    usergender = models.BooleanField(default=False)
+    usergender = models.CharField(max_length=20)
     useremail = models.CharField(max_length=20)
 
     def __str__(self):
@@ -20,7 +20,7 @@ class user(models.Model):
 
 class admin(models.Model):
     administratorObj = models.Manager()
-    adminid = models.CharField(max_length=20)
+    adminid = models.CharField(max_length=20,default=False)
     adminname = models.CharField(max_length=20)
     adminpassword = models.CharField(max_length=20)
     adminemail = models.CharField(max_length=20)
@@ -36,13 +36,14 @@ class admin(models.Model):
 
 class application(models.Model):
     appObj = models.Manager()
-    appid = models.CharField(max_length=20)
+    appid = models.CharField(max_length=20,default=False)
     appname = models.CharField(max_length=20)
     appreason = models.CharField(max_length=100)
     applocation = models.CharField(max_length=100)
-    appgender = models.BooleanField(default=False)
+    appgender = models.CharField(max_length=20)
     appage = models.CharField(max_length=20)
     appincome = models.CharField(max_length=20)
+    appemail = models.CharField(max_length=20,default=False)
 
     def __str__(self):
         return self.appid
@@ -52,14 +53,14 @@ class application(models.Model):
         ordering = ['id']
 
 class cat(models.Model):
-    catObj = models.Manager
-    catid = models.CharField(max_length=20)
+    catObj = models.Manager()
+    catid = models.CharField(max_length=20,default=False)
     catname = models.CharField(max_length=20)
     catlocation = models.CharField(max_length=100)
     catintroduction = models.CharField(max_length=100)
-    catbreed =  models.CharField(max_length=100)
+    catbreed = models.CharField(max_length=100)
     catage = models.CharField(max_length=20)
-    catpicture = models.ImageField(upload_to='img',null=True)
+    catpicture = models.ImageField(upload_to='img',default=False)
 
     def __str__(self):
         return self.catid
