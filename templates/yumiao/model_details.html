@@ -69,17 +69,17 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="//127.0.0.1:8000/yumiao/model"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="{% url 'yumiao:model' %}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <li class="menu-title">Personal Information</li><!-- /.menu-title -->
                     <li>
-                        <a href="//127.0.0.1:8000/yumiao/model_apply"> <i class="menu-icon fa fa-edit (alias)"></i>Apply</a>
+                        <a href="{% url 'yumiao:model_apply' %}"> <i class="menu-icon fa fa-edit (alias)"></i>Apply</a>
                     </li>
                     <li class="active">
-                        <a href="//127.0.0.1:8000/yumiao/model_details"> <i class="menu-icon fa fa-gear (alias)"></i>Details</a>
+                        <a href="{% url 'yumiao:model_details' %}"> <i class="menu-icon fa fa-gear (alias)"></i>Details</a>
                     </li>
                     <li>
-                        <a href="//127.0.0.1:8000/yumiao/model_change"> <i class="menu-icon fa fa-exclamation-circle"></i>Change</a>
+                        <a href="{% url 'yumiao:model_change' %}"> <i class="menu-icon fa fa-exclamation-circle"></i>Change</a>
                     </li>
 
                     <li class="menu-title">Forum</li><!-- /.menu-title -->
@@ -338,7 +338,7 @@
 
             $("#detail_button").click(function () {
                 $.ajax({
-                url: "http://127.0.0.1:8000/yumiao/model_details/",
+                url: "{% url 'yumiao:model_details' %}",
                 type: "POST",
                 data:{
                     'catname': $('#name_input').val(),
@@ -353,7 +353,7 @@
                         if (data.success == '200') {
                             var $val
                             alert("Upload successfully! ")
-                            window.location.href = "http://127.0.0.1:8000/yumiao/model_details?username="+data.appname + '&appage='+data.appage
+                            window.location.href = "{% url 'yumiao:model_details' %}"+"?username="+data.appname + '&appage='+data.appage
                             {#$("#username").html(data.username);#}
                             {#$("#balance").html(data.balance);#}
                             return true

@@ -41,7 +41,7 @@
 		<div class="effect5"><!--shadow effect-->
 			<div class="container">
 				<div class="logo">
-					<h1><a href="//127.0.0.1:8000/yumiao/"><img src="{% static 'Page/images/MeMeet Cat!.png' %}" alt="" /></a></h1>
+					<h1><a href="{% url 'yumiao:index' %}"><img src="{% static 'Page/images/MeMeet Cat!.png' %}" alt="" /></a></h1>
 				</div>
 				<div class="banner-slider">
 					<h2>Hello!</h2>
@@ -66,11 +66,11 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-center">
-								<li class="active"><a href="//127.0.0.1:8000/yumiao/"><span>H</span><span>O</span><span>M</span><span>E</span></a></li>
-								<li><a href="//127.0.0.1:8000/yumiao/about" class="link link--yaku"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a></li>
-								<li><a href="//127.0.0.1:8000/yumiao/apply" class="link link--yaku"><span>A</span><span>P</span><span>P</span><span>L</span><span>Y</span></a></li>
-                                <li><a href="//127.0.0.1:8000/yumiao/gallery" class="link link--yaku"><span>C</span><span>A</span><span>T</span><span>S</span></a></li>
-								<li><a href="//127.0.0.1:8000/yumiao/contact" class="link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span> <span>U</span><span>S</span></a></li>
+								<li class="active"><a href="{% url 'yumiao:index' %}"><span>H</span><span>O</span><span>M</span><span>E</span></a></li>
+								<li><a href="{% url 'yumiao:about' %}" class="link link--yaku"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a></li>
+								<li><a href="{% url 'yumiao:apply' %}" class="link link--yaku"><span>A</span><span>P</span><span>P</span><span>L</span><span>Y</span></a></li>
+                                <li><a href="{% url 'yumiao:gallery' %}" class="link link--yaku"><span>C</span><span>A</span><span>T</span><span>S</span></a></li>
+								<li><a href="{% url 'yumiao:contact' %}" class="link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span> <span>U</span><span>S</span></a></li>
 							</ul>
 							<div class="clearfix"> </div>
 						</div>
@@ -150,22 +150,22 @@
 					<div class="col-md-6 popular-text">
 						<h6>ZHIWEI DAI</h6>
 						<p>School of Computing Science, University of Glasgow, Glasgow City </p>
-						<a href="//127.0.0.1:8000/yumiao/about" class="btn btn-1 btn-1b">Read More</a>
+						<a href="{% url 'yumiao:about' %}" class="btn btn-1 btn-1b">Read More</a>
 					</div>
 					<div class="col-md-6 popular-text">
 						<h6>MAN LIANG</h6>
 						<p>School of Computing Science, University of Glasgow, Glasgow City </p>
-						<a href="//127.0.0.1:8000/yumiao/about" class="btn btn-1 btn-1b">Read More</a>
+						<a href="{% url 'yumiao:about' %}" class="btn btn-1 btn-1b">Read More</a>
 					</div>
                     <div class="col-md-6 popular-text">
 						<h6>JIAJUN YIN</h6>
 						<p>School of Computing Science, University of Glasgow, Glasgow City </p>
-						<a href="//127.0.0.1:8000/yumiao/about" class="btn btn-1 btn-1b">Read More</a>
+						<a href="{% url 'yumiao:about' %}" class="btn btn-1 btn-1b">Read More</a>
 					</div>
                     <div class="col-md-6 popular-text">
 						<h6>WUJIUGE YIN</h6>
 						<p>School of Computing Science, University of Glasgow, Glasgow City </p>
-						<a href="//127.0.0.1:8000/yumiao/about" class="btn btn-1 btn-1b">Read More</a>
+						<a href="{% url 'yumiao:about' %}" class="btn btn-1 btn-1b">Read More</a>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
