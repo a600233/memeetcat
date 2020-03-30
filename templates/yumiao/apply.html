@@ -95,11 +95,17 @@
 						<h4>Leave A Reply</h4>
 						<form>
 							<input type="text" value="Full Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-							<input type="email" value="Age" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Age';}" required="">
+							<input type="text" value="Age" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Age';}" required="">
                             <input type="text" value="Location" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Location';}" required="">
 							<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Reason for application...</textarea>
-							<input type="submit" value="Submit" >
-                            <input type="reset" value="Clear" >
+{#							<input type="submit" value="Submit" >#}
+{#                            <input type="reset" value="Clear" >#}
+                            <div>
+                                <div>
+                                    <input type="submit" value="Submit">
+                                    <input type="reset" value="Clear" >
+                                </div>
+                            </div>
 						</form>
 					</div>
 				</div>
