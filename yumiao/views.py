@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import user,cat,admin,application
 from django.http import JsonResponse
 from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -64,6 +65,11 @@ def register(request):
 
         else:
             return  JsonResponse({'success': '203', 'msg': 'Can not be empty!'})
+
+
+@login_required
+def myaccount(request):
+    return JsonResponse({'success': '200', 'msg': 'Success', 'username': request.username})
 
 def forgot(request):
     return render(request, 'yumiao/forgot.html')
