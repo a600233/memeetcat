@@ -59,7 +59,7 @@
 							<label for="remember"><input type="checkbox" id="remember"> Remember Me</label>
 						</div>
 						<div class="form-group">
-							<p>Not registered? <a href="{% url 'yumiao:register' %}">Sign Up</a> | <a href="{% url 'yumiao:forgot' %}">Forgot Password?</a></p>
+							<p>Not registered? <a href="//127.0.0.1:8000/yumiao/register">Sign Up</a> | <a href="//127.0.0.1:8000/yumiao/forgot">Forgot Password?</a></p>
 						</div>
 						<div class="form-group">
 							<input type="button" id = "login_button" value="Sign In" class="btn btn-primary">
@@ -93,7 +93,7 @@
 
             $("#login_button").click(function () {
                 $.ajax({
-                url: "{% url 'yumiao:login' %}",
+                url: "http://127.0.0.1:8000/yumiao/login/",
                 type: "POST",
                 data:{
                     'username': $('#username').val(),
@@ -105,27 +105,27 @@
                         if (data.success == '200') {
                             alert("Login successfully! ")
                             $("#username").html(data.username)
-                            window.location.href = "{% url 'yumiao:model' %}"+"?username="+data.username
+                            window.location.href = "http://127.0.0.1:8000/yumiao/model?username="+data.username
                             return true
                         }
                         if (data.success == '201') {
-                            alert("Username not existed!")
-                            window.location.href = "{% url 'yumiao:login' %}"
+                            alert("Username existed!")
+                            window.location.href = "http://127.0.0.1:8000/yumiao/login/"
                             return false
                         }
                         if (data.success == '202') {
                             alert("Entered wrong passwords!")
-                            window.location.href = "{% url 'yumiao:login' %}"
+                            window.location.href = "http://127.0.0.1:8000/yumiao/login/"
                             return false
                         }
                         if (data.success == '203') {
                             alert("Username can not be empty!")
-                            window.location.href = "{% url 'yumiao:login' %}"
+                            window.location.href = "http://127.0.0.1:8000/yumiao/login/"
                             return false
                         }
                         if (data.success == '204') {
                             alert("Password can not be empty!")
-                            window.location.href = "{% url 'yumiao:login' %}"
+                            window.location.href = "http://127.0.0.1:8000/yumiao/login/"
                             return false
                         }
                 }

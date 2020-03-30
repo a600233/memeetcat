@@ -62,7 +62,15 @@
 					<a class="example-image-link" href="{% static 'Page/images/ex1.jpg' %}" data-lightbox="example-set" data-title="">
 						<img src="{% static 'Page/images/ex1.jpg' %}" class="img-responsive" alt=""/>
 						<div class="mask">
-							<p>By using Bio Farming Services we can raise your crops and livestock</p>
+                            {% for cat in cats %}
+                                {% if cat.catname == 'de' %}
+							        <p>{{cat.catname}}</p>
+                                    <p>{{cat.catage}}</p>
+                                    <p>{{cat.catbreed}}</p>
+                                    <p>{{cat.catlocation}}</p>
+                                    <p>{{cat.catintroduction}}</p>
+                                {% endif %}
+                            {% endfor %}
 						</div>
 					</a>
 				</div>

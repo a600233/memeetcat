@@ -16,7 +16,23 @@ def apply(request):
     return render(request, 'yumiao/apply.html')
 
 def gallery(request):
-    return render(request, 'yumiao/gallery.html')
+    name_list = cat.catObj.all().values('catname')
+    location_list = cat.catObj.all().values('catlocation')
+    breed_list = cat.catObj.all().values('catbreed')
+    age_list = cat.catObj.all().values('catage')
+    introduction_list = cat.catObj.all().values('catintroduction')
+
+    cat_list = cat.catObj.filter()
+
+    context_dict = {}
+    context_dict['names'] = name_list
+    context_dict['locations'] = location_list
+    context_dict['breeds'] = breed_list
+    context_dict['ages'] = age_list
+    context_dict['introductions'] = introduction_list
+    context_dict['cats'] = cat_list
+
+    return render(request, 'yumiao/gallery.html', {'cats': cat_list})
 
 def contact(request):
     return render(request, 'yumiao/contact.html')
@@ -27,6 +43,7 @@ def login(request):
     if request.method == 'POST':
         uname = request.POST.get('username')
         upwd = request.POST.get('userpassword')
+        # user = authenticate(username=uname, password=upwd)
         if uname == '':
             return JsonResponse({'success': '203', 'msg': 'Username can not be empty!'})
         else:
@@ -88,6 +105,7 @@ def model_apply(request):
         alocation = request.POST.get('applocation')
         aincome = request.POST.get('appincome')
         areason = request.POST.get('appreason')
+        # apicture = request.POST.get('apppicture')
         application.appObj.create(appname=aname,appage=aage,appgender=agender,appemail=aemail,applocation=alocation,appincome=aincome,appreason=areason).save()
         return JsonResponse({'success': '200', 'msg': 'Apply successfully!'})
 

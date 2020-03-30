@@ -44,6 +44,7 @@ class application(models.Model):
     appage = models.CharField(max_length=20)
     appincome = models.CharField(max_length=20)
     appemail = models.CharField(max_length=20,default=False)
+    apppicture = models.ImageField(upload_to='upload/', default=False)
 
     def __str__(self):
         return self.appid
@@ -60,7 +61,7 @@ class cat(models.Model):
     catintroduction = models.CharField(max_length=100)
     catbreed = models.CharField(max_length=100)
     catage = models.CharField(max_length=20)
-    catpicture = models.ImageField(upload_to='img',default=False)
+    catpicture = models.ImageField(upload_to='upload/',default=False)
 
     def __str__(self):
         return self.catid
