@@ -81,22 +81,6 @@
                     <li>
                         <a href="/127.0.0.1:8000/yumiao/model_change"> <i class="menu-icon fa fa-exclamation-circle"></i>Change</a>
                     </li>
-
-                    <li class="menu-title">Forum</li><!-- /.menu-title -->
-
-                    <li>
-                        <a href="#"> <i class="menu-icon fa fa-bell-o"></i>Message</a>
-                    </li>
-                    <li>
-                        <a href="#"> <i class="menu-icon ti-email"></i>Widgets</a>
-                    </li>
-                    <li>
-                        <a href="#"> <i class="menu-icon fa fa-picture-o"></i>Pictures</a>
-                    </li>
-                    <li class="menu-title">Extras</li><!-- /.menu-title -->
-                    <li>
-                        <a href="#"> <i class="menu-icon fa fa-magnet"></i>Contact Us</a>
-                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -108,7 +92,7 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="{% static 'Model/images/MeMeetCat.png' %}" alt="Logo"></a>
+                    <a class="navbar-brand" href="{% url 'yumiao:index' %}"><img src="{% static 'Model/images/MeMeetCat.png' %}" alt="Logo"></a>
 {#                    <a class="navbar-brand hidden" href="./"><img src="{% static 'Model/images/logo2.png' %}" alt="Logo"></a>#}
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>

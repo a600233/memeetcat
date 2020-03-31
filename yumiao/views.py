@@ -104,9 +104,10 @@ def model_apply(request):
         aemail = request.POST.get('appemail')
         alocation = request.POST.get('applocation')
         aincome = request.POST.get('appincome')
+        acatid = request.POST.get('appcatid')
         areason = request.POST.get('appreason')
         # apicture = request.POST.get('apppicture')
-        application.appObj.create(appname=aname,appage=aage,appgender=agender,appemail=aemail,applocation=alocation,appincome=aincome,appreason=areason).save()
+        application.appObj.create(appname=aname,appage=aage,appgender=agender,appemail=aemail,applocation=alocation,appincome=aincome,appcatid=acatid,appreason=areason).save()
         return JsonResponse({'success': '200', 'msg': 'Apply successfully!'})
 
 def model_details(request):

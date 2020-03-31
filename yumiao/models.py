@@ -38,6 +38,7 @@ class application(models.Model):
     appObj = models.Manager()
     appid = models.CharField(max_length=20,default=False)
     appname = models.CharField(max_length=20)
+    appcatid = models.CharField(max_length=20,default=False)
     appreason = models.CharField(max_length=100)
     applocation = models.CharField(max_length=100)
     appgender = models.CharField(max_length=20)
