@@ -42,7 +42,7 @@
 							<ul class="nav navbar-nav navbar-center">
 								<li><a href="{% url 'yumiao:index' %}" class="link link--yaku"><span>H</span><span>O</span><span>M</span><span>E</span></a></li>
 								<li><a href="{% url 'yumiao:about' %}" class="link link--yaku"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a></li>
-								<li class="active"><a href="{% url 'yumiao:apply' %}"><span>A</span><span>P</span><span>P</span><span>L</span><span>Y</span></a></li>
+								<li class="active"><a href="{% url 'yumiao:forum' %}"><span>F</span><span>O</span><span>R</span><span>U</span><span>M</span></a></li>
 								<li><a href="{% url 'yumiao:gallery' %}" class="link link--yaku"><span>C</span><span>A</span><span>T</span><span>S</span></a>
 								<li><a href="{% url 'yumiao:myaccount' %}" class="link link--yaku"><span>M</span><span>Y</span><span>&nbsp;</span><span>A</span><span>C</span><span>C</span><span>O</span><span>U</span><span>N</span><span>T</span></a></li>
 							</ul>
@@ -57,91 +57,99 @@
 	<!-- single -->
 	<div class="single">
 		<div class="container">
-			<h2 class="title">Discussion of Today</h2>
+			<h2 class="title">Forum</h2>
 			<div class="single-info">
 				<div class="col-md-8 single-left">
-					<h3>Andy Who Hates Bathing</h3>
+					<h3>Nicolas</h3>
 					<ul>
 						<li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> 24 March 2020</li>
-						<li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Mark Drew</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Nicolas</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> No Comments</a></li>
 					</ul>
 					<img src="{% static 'Page/images/cat6.jpg' %}" alt=" " class="img-responsive" />
-					<p>Andy is a 2 years old boy who hates bathing. Everytime his master tries to give him a bath he always struggle and will not settle down.
-						<i>Andy is a good boy, but I don't know why he hates bathing this bad.</i>
-						<span>If you have any ideas to help Mark, please send a email to Mark.Drew@goodmails.com or leave a reply with the form below. We really appreciate that.</span></p>
+					<p>I just broken up with his girlfriend. “You don’t even love me! You just want to be accompanied!
+                        Why don’t you raise a dog?” That were the words her girlfriend shouted at his face that night.
+                        After she left, these words have occurred to him several times.
+                        “Probably she’s right, or at least to a certain extent.”
+                        However, she was wrong on one thing, that he loves cats the most, instead of dogs.
+                        Therefore, he is looking for a website to adopt a cat.
+						<i>You don’t even love me! You just want to be accompanied! Why don’t you raise a dog?</i>
+						<span>But I must explain to you how all this mistaken idea of denouncing pleasure 
+							and praising pain was born and I will give you a complete account of the system, and 
+							expound the actual teachings of the great explorer of the truth, the master-builder 
+							of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it 
+							is pleasure</span></p>
 					<div class="admin">
 						<div class="admin-left">
 							<img src="{% static 'Page/images/cat7.jpg' %}" alt=" " class="img-responsive" />
 						</div>
 						<div class="admin-right">
-							<h4><a href="#">Andy</a></h4>
-							<p>A cute boy who hates bathing.</p>
+							<h4><a href="#">Laura James</a></h4>
+							<p>But I must explain to you how all this mistaken idea of denouncing pleasure 
+								and praising pain was born.</p>
 							<a href="#"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
-					<div class="leave-reply">
-						<h4>Leave A Reply</h4>
-						<form>
-							<input type="text" value="Full Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-							<input type="text" value="Age" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Age';}" required="" style="float: right">
-                            <input type="text" value="Location" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Location';}" required="">
-							<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Reason for application...</textarea>
+{#					<div class="leave-reply">#}
+{#						<h4>Leave A Reply</h4>#}
+{#						<form>#}
+{#							<input type="text" value="Full Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">#}
+{#							<input type="text" value="Age" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Age';}" required="" style="float: right">#}
+{#                            <input type="text" value="Location" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Location';}" required="">#}
+{#							<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Reason for application...</textarea>#}
 {#							<input type="submit" value="Submit" >#}
 {#                            <input type="reset" value="Clear" >#}
-                            <div>
-                                <div>
-                                    <input type="submit" value="Submit">
-                                    <input type="reset" value="Clear" style="float: right">
-                                </div>
-                            </div>
-						</form>
-					</div>
+{#                            <div>#}
+{#                                <div>#}
+{#                                    <input type="submit" value="Submit">#}
+{#                                    <input type="reset" value="Clear" style="float: right">#}
+{#                                </div>#}
+{#                            </div>#}
+{#						</form>#}
+{#					</div>#}
 				</div>
 				<div class="col-md-4 single-right">
 					<div class="footer-top-grid1">
 						<h4>Recent Tags</h4>
 						<ul class="tag2">
-							<li><a href="#">Products</a></li>
-							<li><a href="#">Seeds</a></li>
-							<li><a href="#">Bio Farming</a></li>
+							<li><a href="#">British Shorthair</a></li>
+							<li><a href="#">Cyprus</a></li>
+							<li><a href="#">Ragdoll</a></li>
 						</ul>
 						<ul class="tag2">
-							<li><a href="#">Crops</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">photography</a></li>
-							<li><a href="#">Blog</a></li>
+							<li><a href="#">Scottish Fold</a></li>
+							<li><a href="#">Siberian</a></li>
+							<li><a href="#">Cyprus</a></li>
 						</ul>
 						<ul class="tag2">
-							<li><a href="#">Products</a></li>
-							<li><a href="#">Seeds</a></li>
-							<li><a href="#">Farming</a></li>
-							<li><a href="#">Natural</a></li>
+							<li><a href="#">Snowshoe</a></li>
+							<li><a href="#">Cyprus</a></li>
+							<li><a href="#">Ragdoll</a></li>
 						</ul>
 						<ul class="tag2">
-							<li><a href="#">Crops</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">photography</a></li>
-							<li><a href="#">Blog</a></li>
+							<li><a href="#">Siberian</a></li>
+							<li><a href="#">Cyprus</a></li>
+							<li><a href="#">Snowshoe</a></li>
+                            <li><a href="#">Birman</a></li>
 						</ul>
 					</div>
 					<div class="recent">
 						<h4>Recent Posts</h4>
 						<ul>
-							<li><a href="#">Sisi Who Only Eats Cakes</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>January 26, 2020.</span></li>
-							<li><a href="#">Steve Who Won't Sleep at Night</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>January 28, 2020.</span></li>
-							<li><a href="#">Candy Who Scratches Sofa</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>January 30, 2020.</span></li>
-							<li><a href="#">Kim Who Loves Catching Rats</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>February 2, 2020.</span></li>
-							<li><a href="#">Gloria Who Steals Socks</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>February 5, 2020.</span></li>
+							<li><a href="#">Pam, Londom</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>January 26, 2020.</span></li>
+							<li><a href="#">Daly, Edinburgh</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>January 28, 2020.</span></li>
+							<li><a href="#">Aby, Dundee</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>January 30, 2020.</span></li>
+							<li><a href="#">Adela, Aberdeen</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>February 2, 2020.</span></li>
+							<li><a href="#">Silver, Inverness</a><span><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>February 5, 2020.</span></li>
 						</ul>
 					</div>
 					<div class="categories">
 						<h4>Categories</h4>
 						<ul>
-							<li><a href="#">tempora incidunt ut labore dolore</a></li>
-							<li><a href="#">voluptatem quia voluptas sit</a></li>
-							<li><a href="#">sed quia consequuntur magni</a></li>
+							<li><a href="#">We love MeMeetCat!</a></li>
+							<li><a href="#">We can adopt cats on MeMeetCat!</a></li>
+							<li><a href="#">We can meet new friends on MeMeetCat!</a></li>
 						</ul>
 					</div>
 					<div class="instagram-feed">

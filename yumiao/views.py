@@ -12,8 +12,8 @@ def index(request):
 def about(request):
     return render(request, 'yumiao/about.html')
 
-def apply(request):
-    return render(request, 'yumiao/apply.html')
+def forum(request):
+    return render(request, 'yumiao/forum.html')
 
 def gallery(request):
     name_list = cat.catObj.all().values('catname')
@@ -43,7 +43,6 @@ def login(request):
     if request.method == 'POST':
         uname = request.POST.get('username')
         upwd = request.POST.get('userpassword')
-        # user = authenticate(username=uname, password=upwd)
         if uname == '':
             return JsonResponse({'success': '203', 'msg': 'Username can not be empty!'})
         else:
