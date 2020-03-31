@@ -92,12 +92,26 @@ WSGI_APPLICATION = 'memeetcat.wsgi.application'
 #                 }
 #             }
 
-DATABASES = {
-    'default': {
+PythonAnywhere = True
+# PythonAnywhere = False
+if PythonAnywhere is False:
+    DEBUG = True
+    ALLOWED_HOSTS = []
+    DATABASES = {
+        'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+elif PythonAnywhere is True:
+    DEBUG = False
+    ALLOWED_HOSTS = ['username.pythonanywhere.com']
+    DATABASES = {
+        'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
