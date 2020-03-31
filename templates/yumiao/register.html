@@ -107,7 +107,7 @@
 
             $("#register_button").click(function () {
                 $.ajax({
-                url: "http://127.0.0.1:8000/yumiao/register/",
+                url: "{% url 'yumiao:register' %}",
                 type: "POST",
                 data:{
                     'username': $('#username').val(),
@@ -121,22 +121,22 @@
                 success: function (data) {
                         if (data.success == '200') {
                             alert("Register successfully! ")
-                            window.location.href = "http://127.0.0.1:8000/yumiao/login/"
+                            window.location.href = "{% url 'yumiao:login' %}"
                             return true
                         }
                         if (data.success == '201') {
                             alert("Username existed!")
-                            window.location.href = "http://127.0.0.1:8000/yumiao/register/"
+                            window.location.href = "{% url 'yumiao:register' %}"
                             return false
                         }
                         if (data.success == '202') {
                             alert("Entered passwords differ!")
-                            window.location.href = "http://127.0.0.1:8000/yumiao/register/"
+                            window.location.href = "{% url 'yumiao:register' %}"
                             return false
                         }
                         if (data.success == '203') {
                             alert("Can not be empty!")
-                            window.location.href = "http://127.0.0.1:8000/yumiao/register/"
+                            window.location.href = "{% url 'yumiao:register' %}"
                             return false
                         }
                 }
